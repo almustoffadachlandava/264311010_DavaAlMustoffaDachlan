@@ -1,4 +1,4 @@
---[CREATE]--
+-- [CREATE] --
 
 INSERT INTO pengguna
     (id_pengguna, nama, email, password_hash,
@@ -26,17 +26,17 @@ VALUES
 
     (103, 103, 103, '2026-10-22 10:00:00', NULL);
 
---[READ]--
+-- [READ] --
 
 SELECT * FROM pengguna;
 
---[UPDATE]--
+-- [UPDATE] --
 
 UPDATE sesi_login
 SET waktu_logout = '2026-10-22 11:00:00'
 WHERE id_sesi = 102;
 
---[DELETE]--
+-- [DELETE] --
 
 DELETE FROM sesi_login
 WHERE id_sesi = 103;
