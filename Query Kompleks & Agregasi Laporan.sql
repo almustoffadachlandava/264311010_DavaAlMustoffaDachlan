@@ -1,9 +1,7 @@
-SELECT
-    l.nama_lab, COUNT(s.id_sesi) AS jumlah_sesi_aktif
-FROM lab_komputer AS l
-JOIN perangkat AS p
-    ON p.id_lab = l.id_lab
+SELECT p.nama_perangkat,
+       COUNT(s.id_sesi) AS jumlah_sesi_aktif
+FROM perangkat AS p
 JOIN sesi_login AS s
     ON s.id_perangkat = p.id_perangkat
 WHERE s.waktu_logout IS NULL
-GROUP BY l.id_lab, l.nama_lab;
+GROUP BY p.id_perangkat, p.nama_perangkat;
