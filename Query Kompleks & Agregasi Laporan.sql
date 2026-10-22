@@ -1,5 +1,4 @@
-SELECT p.nama_perangkat,
-       COUNT(s.id_sesi) AS jumlah_sesi_aktif
+SELECT p.nama_perangkat, COUNT(s.id_sesi) AS jumlah_sesi_aktif
 FROM perangkat AS p
 JOIN sesi_login AS s
     ON s.id_perangkat = p.id_perangkat
